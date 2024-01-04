@@ -20,16 +20,21 @@
 import urpsPlay, urpsMenu
 import time
 import os
+import platform
 from classes import color
 
 
 #Variables -->
 menChoice = 0
 keepRolling = True
+whichOS = platform.system()
 #Code -->
 #Allow the main menu to keep going until we exit the game by typing "Q"
 while keepRolling == True:
-    os.system('cls')
+    if whichOS == 'Linux':
+        os.system('clear')
+    elif whichOS == 'Windows':
+        os.system('cls')
     print (color.GREEN + color.UNDERLINE + "Welcome to Ultimate Rock Paper Scissors" + color.RESET)
     print("")
     print(color.CYAN + "MAIN MENU" + color.RESET)

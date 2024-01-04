@@ -1,6 +1,6 @@
 from random import randint
 import time
-import os
+import os, platform
 import sys
 import urpsDisplay, urpsInsult
 from classes import color
@@ -21,6 +21,8 @@ def main_game(gameChoice):
     #We will also keep score of these games with a score board. (In the future there will be a round duration selection and more)
     playScore = 0
     compScore = 0
+
+    whichOS = platform.system()
 
     #Lets make this shit work muahahahaha
     #We will begin with a while loop that runs while player variable is equal to false
@@ -173,7 +175,11 @@ def main_game(gameChoice):
         #humPlayer = False
         time.sleep(2)
 
-        os.system('cls')
+        if whichOS == 'Linux':
+            os.system('clear')
+        elif whichOS == 'Windows':
+            os.system('cls')
+        
 
         compHand = playTable[randint(0,2)]
         compHand = compHand.lower()
