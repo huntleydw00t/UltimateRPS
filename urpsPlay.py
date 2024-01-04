@@ -39,11 +39,11 @@ def main_game(gameChoice):
             #Tie Scenario
             if humPlayer == compHand:
                 if compHand == "rock":
-                    print ("Player: ", "\N{right-facing fist}", ": Computer: ", "\N{left-facing fist}")
+                    print ("Player: ", "Rock", ": Computer: ", "Rock")
                 elif compHand == "paper":
-                    print ("Player: ", "\N{Raised back of hand}", ": Computer: ", "\N{Raised back of hand}")
+                    print ("Player: ", "Paper", ": Computer: ", "Paper")
                 else:
-                    print ("Player: ", "\N{victory hand}", ": Computer: ", "\N{victory hand}")
+                    print ("Player: ", "Scissors", ": Computer: ", "Scissors")
                 print(color.GREEN + "Tie! Good Round" + color.RESET)
 
                 #Let's add a point to both players
@@ -54,25 +54,25 @@ def main_game(gameChoice):
             #Let's see what happens when our hero chooses Rock
             elif humPlayer == "rock":
                 if compHand == "paper":
-                    print ("Player: ", "\N{right-facing fist}", ": Computer: ", "\N{Raised back of hand}")
+                    print ("Player: ", "Rock", ": Computer: ", "Paper")
                     print(color.RED + "You Failed! " + color.RESET, compHand, color.RED + " Covers " + color.RESET, humPlayer)
                     compScore = compScore + 1
 
                 else:
-                    print("Player: ", "\N{right-facing fist}", ": Computer: ", "\N{victory hand}")
+                    print("Player: ", "Rock", ": Computer: ", "Scissors")
                     print(color.GREEN + "You Win!!!! " + color.RESET, humPlayer, color.GREEN + " smashes " + color.RESET, compHand)
                     playScore = playScore + 1
                 humPlayer = False
 
             elif humPlayer == "paper":
                 if compHand == "scissors":
-                    print("Player: ", "\N{Raised back of hand}", ": Computer: ", "\N{victory hand}")
+                    print("Player: ", "Paper", ": Computer: ", "Scissors")
                     print(color.RED + "You Failed!! " + color.RESET, compHand, color.RED + " Cut's " + color.RESET, humPlayer)
                     
                     compScore = compScore + 1
 
                 else:
-                    print("Player: ", "\N{Raised back of hand}", ": Computer: ", "\N{left-facing fist}")
+                    print("Player: ", "Paper", ": Computer: ", "Rock")
                     print(color.GREEN + "You Win!! " + color.RESET, humPlayer, color.GREEN + " Covers " + color.RESET, compHand)
                     playScore = playScore + 1
 
@@ -80,13 +80,13 @@ def main_game(gameChoice):
 
             elif humPlayer == "scissors":
                 if compHand == "rock":
-                    print("Player: ", "\N{victory hand}", ": Computer: ", "\N{left-facing fist}")
+                    print("Player: ", "Scissors", ": Computer: ", "Rock")
                     print(color.RED + "You Failed!!! " + color.RESET, compHand, color.RED + " Crushes " + color.RESET, humPlayer)
                     
                     compScore = compScore + 1
 
                 else:
-                    print("Player: ", "\N{victory hand}", ": Computer: ", "\N{Raised back of hand}")
+                    print("Player: ", "Scissors", ": Computer: ", "Paper")
                     print(color.GREEN + "You Win!!! " + color.RESET, humPlayer, color.GREEN + " Cuts " + color.RESET, compHand)
                     playScore = playScore + 1
                 humPlayer = False
@@ -111,11 +111,11 @@ def main_game(gameChoice):
             #Tie Scenario
             if humPlayer == compHand:
                 if compHand == "rock":
-                    print ("Player: ", "\N{right-facing fist}", ": Computer: ", "\N{left-facing fist}")
+                    print ("Player: ", "Rock", ": Computer: ", "Rock")
                 elif compHand == "paper":
-                    print ("Player: ", "\N{Raised back of hand}", ": Computer: ", "\N{Raised back of hand}")
+                    print ("Player: ", "Paper", ": Computer: ", "Paper")
                 else:
-                    print ("Player: ", "\N{victory hand}", ": Computer: ", "\N{victory hand}")
+                    print ("Player: ", "Scissors", ": Computer: ", "Scissors")
                 print(color.GREEN + "Tie! Good Round" + color.RESET)
 
                 #Let's add a point to both players
@@ -126,38 +126,38 @@ def main_game(gameChoice):
             #Let's see what happens when our hero chooses Rock
             elif humPlayer == "rock":
                 if compHand == "paper":
-                    print ("Player: ", "\N{right-facing fist}", ": Computer: ", "\N{Raised back of hand}")
+                    print ("Player: ", "Rock", ": Computer: ", "Paper")
                     print(color.RED + "You Failed! " + color.RESET, compHand, color.RED + " Covers " + color.RESET, humPlayer)
                     print(color.YELLOW + "Judge: ", urpsInsult.judge_insult() + color.RESET)
                     compScore = compScore + 1
 
                 else:
-                    print("Player: ", "\N{right-facing fist}", ": Computer: ", "\N{victory hand}")
+                    print("Player: ", "Rock", ": Computer: ", "Scissors")
                     print(color.GREEN + "You Win!!!! " + color.RESET, humPlayer, color.GREEN + " smashes " + color.RESET, compHand)
                     playScore = playScore + 1
                 humPlayer = False
 
             elif humPlayer == "paper":
                 if compHand == "scissors":
-                    print("Player: ", "\N{Raised back of hand}", ": Computer: ", "\N{victory hand}")
+                    print("Player: ", "Paper", ": Computer: ", "Scissors")
                     print(color.RED + "You Failed!! " + color.RESET, compHand, color.RED + " Cut's " + color.RESET, humPlayer)
                     print(color.YELLOW + "Judge: ", urpsInsult.judge_insult() + color.RESET)
                     compScore = compScore + 1
 
                 else:
-                    print("Player: ", "\N{Raised back of hand}", ": Computer: ", "\N{left-facing fist}")
+                    print("Player: ", "Paper", ": Computer: ", "Rock")
                     print(color.GREEN + "You Win!! " + color.RESET, humPlayer, color.GREEN + " Covers " + color.RESET, compHand)
                     playScore = playScore + 1
                 humPlayer = False
             elif humPlayer == "scissors":
                 if compHand == "rock":
-                    print("Player: ", "\N{victory hand}", ": Computer: ", "\N{left-facing fist}")
+                    print("Player: ", "Scissors", ": Computer: ", "Rock")
                     print(color.RED + "You Failed!!! " + color.RESET, compHand, color.RED + " Crushes " + color.RESET, humPlayer)
                     print(color.YELLOW + "Judge: ", urpsInsult.judge_insult() + color.RESET)
                     compScore = compScore + 1
 
                 else:
-                    print("Player: ", "\N{victory hand}", ": Computer: ", "\N{Raised back of hand}")
+                    print("Player: ", "Scissors", ": Computer: ", "Paper")
                     print(color.GREEN + "You Win!!! " + color.RESET, humPlayer, color.GREEN + " Cuts " + color.RESET, compHand)
                     playScore = playScore + 1
                 humPlayer = False
